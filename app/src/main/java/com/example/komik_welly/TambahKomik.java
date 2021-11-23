@@ -59,7 +59,7 @@ public class TambahKomik extends AppCompatActivity {
             }
 
             private void insert_data_ke_server(String get_kode_buku, String get_judul_buku, String get_tipe_buku) {
-                String URI = "http://192.168.91.1/server-komik/?komik=tambah";
+                String URI = "http://192.168.0.101/server-komik/?komik=tambah";
                 RequestQueue queue          = Volley.newRequestQueue(TambahKomik.this);
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, URI, new Response.Listener<String>() {
                     @Override

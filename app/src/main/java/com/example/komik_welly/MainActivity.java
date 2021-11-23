@@ -31,7 +31,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    String server_url_select = "http://192.168.91.1/server-komik/?komik=all";
+    String server_url_select = "http://192.168.0.101/server-komik/?komik=all";
     ListView list;
     ListBukuAdapter listBukuAdapter;
     List<ListDataBuku> itemList = new ArrayList<ListDataBuku>();
@@ -54,7 +54,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 ListDataBuku data = itemList.get(i);
-                Toast.makeText(MainActivity.this, data.getKode_buku(),Toast.LENGTH_LONG).show();
+
+                String get_kodebuku = data.getKode_buku();
+                String get_judul = data.getJudul();
+                String get_tipe = data.getTipe();
+                String get_cover = data.getCover();
+
+                Intent i_detail = new Intent( MainActivity.this, DetailActivity.class);
+                i_detail.putExtra("get_kodebuku", get_kodebuku);
+                i_detail.putExtra("get_judul", get_judul);
+                i_detail.putExtra("get_tipe", get_tipe);
+                i_detail.putExtra("get_cover", get_cover);
+                startActivity(i_detail);
+
+//                Toast.makeText(MainActivity.this, get_kodebuku,Toast.LENGTH_LONG).show();
 
             }
         });

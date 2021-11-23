@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Komik_Welly"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".UpdateKomikActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".TambahKomik"
             android:exported="true" />
         <activity

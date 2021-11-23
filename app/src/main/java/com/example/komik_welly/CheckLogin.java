@@ -24,7 +24,7 @@ public class CheckLogin {
     }
 
     public void check_login(String get_input_username, String get_input_password) {
-        String URI = "http://192.168.91.1/server-komik/?komik=login";
+        String URI = "http://192.168.0.101/server-komik/?komik=login";
         RequestQueue queue          = Volley.newRequestQueue(context);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URI, new Response.Listener<String>() {
             @Override

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/networkImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:id="@+id/textView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:paddingEnd="20dp"
+        android:text="Kode"
+        app:layout_constraintStart_toEndOf="@+id/networkImageView"
+        app:layout_constraintTop_toTopOf="@+id/networkImageView" />
+
+
+    <TextView
+
+        android:id="@+id/txt_kode_komik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" kode"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:id="@+id/textView2"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingEnd="15dp"
+        android:text="Judul"
+        app:layout_constraintStart_toEndOf="@+id/networkImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/txt_judul_komik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" Nama"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:id="@+id/textView3"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Tipe"
+        app:layout_constraintStart_toEndOf="@+id/networkImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/txt_tipe_komik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" Type"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+
+    <Button
+        android:id="@+id/UpdateKomik"
+        android:layout_width="103dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="10dp"
+        android:text="Update Komik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/networkImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/DeleteKomik"
+        android:layout_width="105dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:text="Delete Komik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/networkImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
