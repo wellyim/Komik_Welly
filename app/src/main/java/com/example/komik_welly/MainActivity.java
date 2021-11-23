@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
         btn_tambah_komik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent tbh_komik = new Intent(MainActivity.this, TambahKomik.class);
+                startActivity(tbh_komik);
+
                 String sess_created_login= "session_created_login";
                 String session_create_login= "create_login";
                 sharedpreferenlogin= getSharedPreferences(sess_created_login, Context.MODE_PRIVATE);
